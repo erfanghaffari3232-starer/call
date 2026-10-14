@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d1c"><title>Erfan Voice — تماس صوتی</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header><div class="logo">E<span>●</span></div><div><h1>Erfan Voice</h1><p>تماس صوتی آنلاین • نسخه کامل اولیه</p></div><span id="status" class="status">آماده</span></header>
+  <section class="hero"><div class="orb">♫</div><h2>با صدای واقعی صحبت کن</h2><p>با میکروفون دستگاه و اتصال اینترنت؛ بدون تماس تلفنی و بدون هزینه تماس تلفنی.</p></section>
+  <section class="panel">
+    <label for="room">شناسه طرف مقابل</label>
+    <div class="roomrow"><input id="room" maxlength="40" autocomplete="off" placeholder="شناسه‌ای که دوستت برایت فرستاده"><button id="copy" class="secondary">کپی شناسه</button></div>
+    <p class="hint">اول تماس را شروع کن، شناسه خودت را برای دوستت بفرست؛ او شناسه تو را در این کادر وارد می‌کند.</p>
+    <div class="actions"><button id="join" class="primary">🎙️ روشن‌کردن میکروفون</button><button id="leave" class="danger" disabled>پایان تماس</button></div>
+    <div class="controls"><button id="mute" class="secondary" disabled>🎤 قطع میکروفون</button><button id="speaker" class="secondary" disabled>🔊 خاموش‌کردن صدا</button></div>
+    <div class="myidbox"><b>شناسه تماس تو:</b><code id="myid">بعد از شروع نمایش داده می‌شود</code><button id="copyid" class="secondary" disabled>کپی شناسه من</button></div><div id="callstate" class="callstate">برای شروع، میکروفون را روشن کن و شناسه‌ات را برای طرف مقابل بفرست.</div>
+    <audio id="remoteAudio" autoplay playsinline></audio>
+  </section>
+  <section class="tips"><h3>روش استفاده</h3><ol><li>هر دو نفر این صفحه را باز کنند.</li><li>یک شناسه مشترک وارد کنند.</li><li>هر دو روی «شروع / ورود به تماس» بزنند و اجازه میکروفون بدهند.</li><li>برای تماس، اینترنت لازم است؛ اگر شبکه یا مرورگر اتصال WebRTC را مسدود کند، تماس وصل نمی‌شود.</li></ol></section>
+  <footer>ساخته‌شده با WebRTC و PeerJS • صدا مستقیماً بین دستگاه‌ها منتقل می‌شود.</footer>
+</main>
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script><script src="app.js"></script>
+</body></html>
